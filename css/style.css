@@ -1,0 +1,90 @@
+/* imports external font from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* default values for header and paragraph text
+any later instances of h or p elements will have modified values */
+h1 {
+    font-family: 'Roboto', cursive;
+    font-weight: 900; font-size: 2rem;
+    letter-spacing: 3pt;
+
+    text-align: center;
+}
+    h2 {
+        font-family: 'Roboto', cursive;
+        font-weight: 500; font-size: 1.5rem;
+        letter-spacing: 1pt;
+
+        padding: 20px;
+        text-align: center;
+    }
+    p {
+        font-family: 'Roboto', cursive;
+        font-size: 1rem; 
+    }
+
+/* this contains all body elements and centers them on the page*/
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/*hero image*/
+/* better to treat the image as a background div rather than an image to use those properties instead
+don't forget to use (../ to leave the css file and locate images folder)*/
+.hero {
+    background-image: url(../images/hero.jpg);
+    background-size: cover; background-position: center; /*crop and reposition the image within the div area */
+    min-height: 300px; /*hero image cannot shrink smaller than this size */
+
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+
+    padding: 30px;
+}
+    .hero h2 {
+        text-align: left;
+        padding: 0;
+        margin: 10px 0px;
+    }
+    .hero p {
+        text-align: left;
+        margin: 0;
+        width: 35%;
+        line-height: 1.75rem;
+    }
+
+/* gallery */
+.gallery-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.25rem;
+}
+    .gallery-images img {
+        width: 100%; /* fits within the defined grid space */
+        object-fit: cover;
+    }
+
+/* footer */
+footer {
+    margin: 1rem;
+
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    gap: 1.25rem;
+}
+    /* footer links */
+    footer a {
+        font-family: 'Roboto', cursive;
+        font-size: 1rem; 
+    }
+    a:link, a:visited, a:active {
+        color: rgb(65, 65, 65);
+    }
+    a:hover {
+        color: rgb(109, 148, 255);
+    }
+
+    /* CHANGE THE MARGIN AND POINTS TO REM */
